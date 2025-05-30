@@ -1,0 +1,223 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts and Colors */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Container Utility */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003366;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) 60%, transparent), url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Articles Grid */
+.articles .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+/* Article Cards */
+.article-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.article-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.article-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+.article-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Overlay Cards */
+.overlay-card {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 300px;
+  padding: 0;
+  position: relative;
+  border: none;
+  box-shadow: none;
+}
+
+.overlay-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.4) 70%, transparent);
+  z-index: 1;
+}
+
+.overlay-card h2,
+.overlay-card p {
+  position: absolute;
+  z-index: 2;
+  padding: 0 15px;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+
+.overlay-card h2 {
+  bottom: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.overlay-card p {
+  bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .articles .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.article-body p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Adds space between paragraphs */
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.article-banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
